@@ -18,4 +18,12 @@ public class TestSubstraction {
         float actual_value = sub.substraction(4.0f, 5.0f);
         Assert.assertEquals(expected_value , actual_value , 0.0f);
     }
+
+    @Test
+    public void test_substraction_double(){
+        double expected_value = - 1.0;
+        Substraction sub = new Substraction();
+        double actual_value = sub.substraction(4.0, 5.0);
+        Assert.assertEquals(expected_value , actual_value , 0.0f);
+    }
 }

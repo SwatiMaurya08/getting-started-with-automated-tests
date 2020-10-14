@@ -39,4 +39,11 @@ public class TestAddition {
         Assert.assertEquals(expected_value, actual_value, 0.0f);
     }
 
+    @Test
+    public void test_addition_double() {
+        double expected_value = 9.0f;
+        double actual_value = add.addition(4.0f, 5.0f);
+        Assert.assertEquals(expected_value, actual_value, 0.0f);
+    }
+
 }

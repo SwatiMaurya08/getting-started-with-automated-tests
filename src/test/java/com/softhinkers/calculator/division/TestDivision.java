@@ -20,4 +20,12 @@ public class TestDivision {
         Assert.assertEquals(expected_value, actual_value,0.0f);
     }
 
+
+    @Test
+    public void test_division_double() {
+        double expected_value = 5.0;
+        Division div = new Division();
+        double actual_value = div.division(10.0, 2.0);
+        Assert.assertEquals(expected_value, actual_value,0.0);
+    }
 }
