@@ -1,7 +1,9 @@
-<suite name="Suite1" verbose="1" >
-    <test name="testAddition" >
+<suite name="Suite1" verbose="1">
+    <test name="TestArithemetic">
         <classes>
-            <class name="com.softhinkers.addition.TestAddition" />
+            <class name="com.softhinkers.addition.TestAddition"/>
+            <class name="com.softhinkers.division.TestDivision"/>
         </classes>
     </test>
 </suite>
+
