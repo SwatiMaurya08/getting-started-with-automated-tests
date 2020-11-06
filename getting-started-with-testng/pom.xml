@@ -7,14 +7,44 @@
     <groupId>com.softhinkers</groupId>
     <artifactId>getting-started-with-testng</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <testngver>7.3.0</testngver>
+        <mvnsurfirever>2.22.2</mvnsurfirever>
+        <suiteFile>testng.xml</suiteFile>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.3.0</version>
+            <version>${testngver}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <defaultGoal>install</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${mvnsurfirever}</version>
+                <inherited>true</inherited>
+                <executions>
+                    <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suiteFile}</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
