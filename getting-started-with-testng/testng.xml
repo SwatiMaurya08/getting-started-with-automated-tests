@@ -1,0 +1,7 @@
+<suite name="Suite1" verbose="1" >
+    <test name="testAddition" >
+        <classes>
+            <class name="com.softhinkers.addition.TestAddition" />
+        </classes>
+    </test>
+</suite>
