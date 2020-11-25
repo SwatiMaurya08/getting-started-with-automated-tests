@@ -1,8 +1,11 @@
-<suite name="Suite1" verbose="1">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="ArithemeticOperation" verbose="1">
     <test name="TestArithemetic">
         <classes>
             <class name="com.softhinkers.addition.TestAddition"/>
             <class name="com.softhinkers.division.TestDivision"/>
+            <class name="com.softhinkers.multiplication.TestMultiplication"/>
+            <class name="com.softhinkers.substraction.TestSubstraction"/>
         </classes>
     </test>
 </suite>

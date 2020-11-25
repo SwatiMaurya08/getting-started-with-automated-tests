@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 /**
  * TestCases for Addition
- * */
+ */
 public class TestAddition {
     private Addition add = new Addition();
 
@@ -14,12 +14,12 @@ public class TestAddition {
     public void testAdditionInt() {
         int expectedValue = 10;
         int actualValue = add.addition(5, 5);
-        Assert.assertEquals(actualValue, expectedValue,"Your actualValue does not meets expectedValue");
+        Assert.assertEquals(actualValue, expectedValue, "Your actualValue does not meets expectedValue");
     }
 
     @Test
     public void testAdditionFloat() {
-        float expectedValue = 10.0f;
+        float expectedValue = 11.0f;
         float actualValue = add.addition(5.0f, 6.0f);
         Assert.assertEquals(actualValue, expectedValue, "Your actualValue does not meets expectedValue");
     }

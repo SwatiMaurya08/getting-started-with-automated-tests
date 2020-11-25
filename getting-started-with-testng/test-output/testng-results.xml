@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ArithemeticOperation" duration-ms="219" started-at="2020-11-25T19:46:45 IST" finished-at="2020-11-25T19:46:45 IST">
+    <groups>
+    </groups>
+    <test name="TestArithemetic" duration-ms="219" started-at="2020-11-25T19:46:45 IST" finished-at="2020-11-25T19:46:45 IST">
+      <class name="com.softhinkers.substraction.TestSubstraction">
+        <test-method status="PASS" signature="TestSubstractionInt()[pri:0, instance:com.softhinkers.substraction.TestSubstraction@35f983a6]" name="TestSubstractionInt" duration-ms="0" started-at="2020-11-25T19:46:45 IST" finished-at="2020-11-25T19:46:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestSubstractionInt -->
+        <test-method status="PASS" signature="TestSubstractionFloat()[pri:0, instance:com.softhinkers.substraction.TestSubstraction@35f983a6]" name="TestSubstractionFloat" duration-ms="0" started-at="2020-11-25T19:46:45 IST" finished-at="2020-11-25T19:46:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestSubstractionFloat -->
+      </class> <!-- com.softhinkers.substraction.TestSubstraction -->
+      <class name="com.softhinkers.division.TestDivision">
+        <test-method status="PASS" signature="TestDivisionInt()[pri:0, instance:com.softhinkers.division.TestDivision@6442b0a6]" name="TestDivisionInt" duration-ms="0" started-at="2020-11-25T19:46:45 IST" finished-at="2020-11-25T19:46:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestDivisionInt -->
+        <test-method status="PASS" signature="TestDivisionFloat()[pri:0, instance:com.softhinkers.division.TestDivision@6442b0a6]" name="TestDivisionFloat" duration-ms="0" started-at="2020-11-25T19:46:45 IST" finished-at="2020-11-25T19:46:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestDivisionFloat -->
+      </class> <!-- com.softhinkers.division.TestDivision -->
+      <class name="com.softhinkers.addition.TestAddition">
+        <test-method status="PASS" signature="testAdditionFloat()[pri:0, instance:com.softhinkers.addition.TestAddition@4411d970]" name="testAdditionFloat" duration-ms="32" started-at="2020-11-25T19:46:45 IST" finished-at="2020-11-25T19:46:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdditionFloat -->
+        <test-method status="PASS" signature="testAdditionInt()[pri:0, instance:com.softhinkers.addition.TestAddition@4411d970]" name="testAdditionInt" duration-ms="0" started-at="2020-11-25T19:46:45 IST" finished-at="2020-11-25T19:46:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdditionInt -->
+      </class> <!-- com.softhinkers.addition.TestAddition -->
+      <class name="com.softhinkers.multiplication.TestMultiplication">
+        <test-method status="PASS" signature="TestMultiplicationFloat()[pri:0, instance:com.softhinkers.multiplication.TestMultiplication@60f82f98]" name="TestMultiplicationFloat" duration-ms="0" started-at="2020-11-25T19:46:45 IST" finished-at="2020-11-25T19:46:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestMultiplicationFloat -->
+        <test-method status="PASS" signature="TestMultiplicationInt()[pri:0, instance:com.softhinkers.multiplication.TestMultiplication@60f82f98]" name="TestMultiplicationInt" duration-ms="0" started-at="2020-11-25T19:46:45 IST" finished-at="2020-11-25T19:46:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestMultiplicationInt -->
+      </class> <!-- com.softhinkers.multiplication.TestMultiplication -->
+    </test> <!-- TestArithemetic -->
+  </suite> <!-- ArithemeticOperation -->
+</testng-results>

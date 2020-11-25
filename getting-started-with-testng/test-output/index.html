@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-ArithemeticOperation">
+              <span class="suite-name border-passed">ArithemeticOperation</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-ArithemeticOperation">
+                    <span>E:\Selenium\getting-started-with-automated-tests\getting-started-with-testng\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-ArithemeticOperation">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-ArithemeticOperation">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-ArithemeticOperation">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-ArithemeticOperation">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-ArithemeticOperation">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-ArithemeticOperation">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">8 methods,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-ArithemeticOperation" class="hide-methods passed suite-ArithemeticOperation"> (hide)</a> <!-- hide-methods passed suite-ArithemeticOperation -->
+                      <a href="#" panel-name="suite-ArithemeticOperation" class="show-methods passed suite-ArithemeticOperation"> (show)</a> <!-- show-methods passed suite-ArithemeticOperation -->
+                    </span>
+                    <div class="method-list-content passed suite-ArithemeticOperation">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ArithemeticOperation" title="com.softhinkers.division.TestDivision" hash-for-method="TestDivisionFloat">TestDivisionFloat</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ArithemeticOperation" title="com.softhinkers.division.TestDivision" hash-for-method="TestDivisionInt">TestDivisionInt</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ArithemeticOperation" title="com.softhinkers.multiplication.TestMultiplication" hash-for-method="TestMultiplicationFloat">TestMultiplicationFloat</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ArithemeticOperation" title="com.softhinkers.multiplication.TestMultiplication" hash-for-method="TestMultiplicationInt">TestMultiplicationInt</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ArithemeticOperation" title="com.softhinkers.substraction.TestSubstraction" hash-for-method="TestSubstractionFloat">TestSubstractionFloat</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ArithemeticOperation" title="com.softhinkers.substraction.TestSubstraction" hash-for-method="TestSubstractionInt">TestSubstractionInt</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ArithemeticOperation" title="com.softhinkers.addition.TestAddition" hash-for-method="testAdditionFloat">testAdditionFloat</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ArithemeticOperation" title="com.softhinkers.addition.TestAddition" hash-for-method="testAdditionInt">testAdditionInt</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-ArithemeticOperation -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-ArithemeticOperation" class="panel ArithemeticOperation">
+          <div class="suite-ArithemeticOperation-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.softhinkers.addition.TestAddition</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAdditionFloat">
+                  </a> <!-- testAdditionFloat -->
+                  <span class="method-name">testAdditionFloat</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAdditionInt">
+                  </a> <!-- testAdditionInt -->
+                  <span class="method-name">testAdditionInt</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ArithemeticOperation-class-passed -->
+          <div class="suite-ArithemeticOperation-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.softhinkers.substraction.TestSubstraction</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestSubstractionFloat">
+                  </a> <!-- TestSubstractionFloat -->
+                  <span class="method-name">TestSubstractionFloat</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestSubstractionInt">
+                  </a> <!-- TestSubstractionInt -->
+                  <span class="method-name">TestSubstractionInt</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ArithemeticOperation-class-passed -->
+          <div class="suite-ArithemeticOperation-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.softhinkers.division.TestDivision</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestDivisionFloat">
+                  </a> <!-- TestDivisionFloat -->
+                  <span class="method-name">TestDivisionFloat</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestDivisionInt">
+                  </a> <!-- TestDivisionInt -->
+                  <span class="method-name">TestDivisionInt</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ArithemeticOperation-class-passed -->
+          <div class="suite-ArithemeticOperation-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.softhinkers.multiplication.TestMultiplication</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestMultiplicationFloat">
+                  </a> <!-- TestMultiplicationFloat -->
+                  <span class="method-name">TestMultiplicationFloat</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestMultiplicationInt">
+                  </a> <!-- TestMultiplicationInt -->
+                  <span class="method-name">TestMultiplicationInt</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ArithemeticOperation-class-passed -->
+        </div> <!-- panel ArithemeticOperation -->
+        <div panel-name="test-xml-ArithemeticOperation" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">E:\Selenium\getting-started-with-automated-tests\getting-started-with-testng\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;ArithemeticOperation&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TestArithemetic&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.softhinkers.addition.TestAddition&quot;/&gt;
+      &lt;class name=&quot;com.softhinkers.division.TestDivision&quot;/&gt;
+      &lt;class name=&quot;com.softhinkers.multiplication.TestMultiplication&quot;/&gt;
+      &lt;class name=&quot;com.softhinkers.substraction.TestSubstraction&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TestArithemetic --&gt;
+&lt;/suite&gt; &lt;!-- ArithemeticOperation --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-ArithemeticOperation" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for ArithemeticOperation</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">TestArithemetic (4 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-ArithemeticOperation" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for ArithemeticOperation</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-ArithemeticOperation" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for ArithemeticOperation</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_ArithemeticOperation');
+function tableData_ArithemeticOperation() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(8);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testAdditionFloat')
+data.setCell(0, 2, 'com.softhinkers.addition.TestAddition')
+data.setCell(0, 3, 32);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TestSubstractionInt')
+data.setCell(1, 2, 'com.softhinkers.substraction.TestSubstraction')
+data.setCell(1, 3, 0);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TestSubstractionFloat')
+data.setCell(2, 2, 'com.softhinkers.substraction.TestSubstraction')
+data.setCell(2, 3, 0);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TestMultiplicationFloat')
+data.setCell(3, 2, 'com.softhinkers.multiplication.TestMultiplication')
+data.setCell(3, 3, 0);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'TestDivisionInt')
+data.setCell(4, 2, 'com.softhinkers.division.TestDivision')
+data.setCell(4, 3, 0);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'TestDivisionFloat')
+data.setCell(5, 2, 'com.softhinkers.division.TestDivision')
+data.setCell(5, 3, 0);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testAdditionInt')
+data.setCell(6, 2, 'com.softhinkers.addition.TestAddition')
+data.setCell(6, 3, 0);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'TestMultiplicationInt')
+data.setCell(7, 2, 'com.softhinkers.multiplication.TestMultiplication')
+data.setCell(7, 3, 0);
+window.suiteTableData['ArithemeticOperation']= { tableData: data, tableDiv: 'times-div-ArithemeticOperation'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 32 ms</span>
+              <div id="times-div-ArithemeticOperation">
+              </div> <!-- times-div-ArithemeticOperation -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-ArithemeticOperation" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for ArithemeticOperation</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-ArithemeticOperation" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-ArithemeticOperation" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.softhinkers.addition.TestAddition</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testAdditionFloat</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAdditionInt</span>
+                <span class="method-start">32 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.softhinkers.division.TestDivision</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TestDivisionFloat</span>
+                <span class="method-start">47 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TestDivisionInt</span>
+                <span class="method-start">47 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.softhinkers.multiplication.TestMultiplication</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TestMultiplicationFloat</span>
+                <span class="method-start">47 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TestMultiplicationInt</span>
+                <span class="method-start">47 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.softhinkers.substraction.TestSubstraction</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TestSubstractionFloat</span>
+                <span class="method-start">47 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TestSubstractionInt</span>
+                <span class="method-start">47 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
