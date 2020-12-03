@@ -6,6 +6,7 @@
             <class name="com.softhinkers.division.TestDivision"/>
             <class name="com.softhinkers.multiplication.TestMultiplication"/>
             <class name="com.softhinkers.substraction.TestSubstraction"/>
+            <class name="com.softhinkers.annotations.TestngAnnotations"/>
         </classes>
     </test>
 </suite>
