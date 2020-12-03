@@ -7,7 +7,26 @@
             <class name="com.softhinkers.multiplication.TestMultiplication"/>
             <class name="com.softhinkers.substraction.TestSubstraction"/>
             <class name="com.softhinkers.annotations.TestngAnnotations"/>
+            <class name="com.softhinkers.testcasespriorities.TestCasesPriorities"/>
+            <class name="com.softhinkers.testngdependents.DependsOnGroups"/>
+            <class name="com.softhinkers.testngdependents.DependsOnMethod"/>
+            <class name="com.softhinkers.testngdependents.DependsOnTest"/>
+        </classes>
+    </test>
+
+    <test name="ToolsQA">
+        <groups>
+            <dependencies>
+                <group depends-on="openbrowser" name="login"></group>
+                <group depends-on="login" name="viewaccount"></group>
+                <group depends-on="viewaccount" name="logout"></group>
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="com.softhinkers.testngdependents.GroupDependsXml"/>
         </classes>
     </test>
 </suite>
+
+
 

@@ -1,89 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+<testng-results skipped="0" failed="0" ignored="0" total="25" passed="25">
   <reporter-output>
   </reporter-output>
-  <suite name="ArithemeticOperation" duration-ms="227" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
+  <suite name="ArithemeticOperation" duration-ms="250" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
     <groups>
+      <group name="viewaccount">
+        <method signature="GroupDependsXml.ViewAcc()[pri:0, instance:com.softhinkers.testngdependents.GroupDependsXml@737996a0]" name="ViewAcc" class="com.softhinkers.testngdependents.GroupDependsXml"/>
+      </group> <!-- viewaccount -->
+      <group name="logout">
+        <method signature="GroupDependsXml.CloseAccount()[pri:0, instance:com.softhinkers.testngdependents.GroupDependsXml@737996a0]" name="CloseAccount" class="com.softhinkers.testngdependents.GroupDependsXml"/>
+      </group> <!-- logout -->
+      <group name="openbrowser">
+        <method signature="GroupDependsXml.OpenBrowser()[pri:0, instance:com.softhinkers.testngdependents.GroupDependsXml@737996a0]" name="OpenBrowser" class="com.softhinkers.testngdependents.GroupDependsXml"/>
+      </group> <!-- openbrowser -->
+      <group name="SignIn">
+        <method signature="DependsOnGroups.LogIn()[pri:0, instance:com.softhinkers.testngdependents.DependsOnGroups@dfd3711]" name="LogIn" class="com.softhinkers.testngdependents.DependsOnGroups"/>
+      </group> <!-- SignIn -->
+      <group name="login">
+        <method signature="GroupDependsXml.LogIn()[pri:0, instance:com.softhinkers.testngdependents.GroupDependsXml@737996a0]" name="LogIn" class="com.softhinkers.testngdependents.GroupDependsXml"/>
+      </group> <!-- login -->
     </groups>
-    <test name="TestArithemetic" duration-ms="227" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
-      <class name="com.softhinkers.substraction.TestSubstraction">
-        <test-method status="PASS" signature="TestSubstractionFloat()[pri:0, instance:com.softhinkers.substraction.TestSubstraction@21bcffb5]" name="TestSubstractionFloat" duration-ms="1" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
+    <test name="TestArithemetic" duration-ms="93" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+      <class name="com.softhinkers.testngdependents.DependsOnGroups">
+        <test-method status="PASS" signature="LogIn()[pri:0, instance:com.softhinkers.testngdependents.DependsOnGroups@dfd3711]" name="LogIn" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestSubstractionFloat -->
-        <test-method status="PASS" signature="TestSubstractionInt()[pri:0, instance:com.softhinkers.substraction.TestSubstraction@21bcffb5]" name="TestSubstractionInt" duration-ms="7" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
+        </test-method> <!-- LogIn -->
+        <test-method status="PASS" signature="ViewAcc()[pri:0, instance:com.softhinkers.testngdependents.DependsOnGroups@dfd3711]" name="ViewAcc" duration-ms="0" depends-on-groups="SignIn" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ViewAcc -->
+      </class> <!-- com.softhinkers.testngdependents.DependsOnGroups -->
+      <class name="com.softhinkers.substraction.TestSubstraction">
+        <test-method status="PASS" signature="TestSubstractionInt()[pri:0, instance:com.softhinkers.substraction.TestSubstraction@2ed94a8b]" name="TestSubstractionInt" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSubstractionInt -->
+        <test-method status="PASS" signature="TestSubstractionFloat()[pri:0, instance:com.softhinkers.substraction.TestSubstraction@2ed94a8b]" name="TestSubstractionFloat" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestSubstractionFloat -->
       </class> <!-- com.softhinkers.substraction.TestSubstraction -->
+      <class name="com.softhinkers.testcasespriorities.TestCasesPriorities">
+        <test-method status="PASS" signature="c_method()[pri:0, instance:com.softhinkers.testcasespriorities.TestCasesPriorities@38082d64]" name="c_method" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- c_method -->
+        <test-method status="PASS" signature="d_method()[pri:0, instance:com.softhinkers.testcasespriorities.TestCasesPriorities@38082d64]" name="d_method" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- d_method -->
+        <test-method status="PASS" signature="a_method()[pri:1, instance:com.softhinkers.testcasespriorities.TestCasesPriorities@38082d64]" name="a_method" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- a_method -->
+        <test-method status="PASS" signature="b_method()[pri:1, instance:com.softhinkers.testcasespriorities.TestCasesPriorities@38082d64]" name="b_method" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- b_method -->
+        <test-method status="PASS" signature="e_Method()[pri:2, instance:com.softhinkers.testcasespriorities.TestCasesPriorities@38082d64]" name="e_Method" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- e_Method -->
+      </class> <!-- com.softhinkers.testcasespriorities.TestCasesPriorities -->
       <class name="com.softhinkers.division.TestDivision">
-        <test-method status="PASS" signature="TestDivisionFloat()[pri:0, instance:com.softhinkers.division.TestDivision@3d8c7aca]" name="TestDivisionFloat" duration-ms="1" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
+        <test-method status="PASS" signature="TestDivisionFloat()[pri:0, instance:com.softhinkers.division.TestDivision@79698539]" name="TestDivisionFloat" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestDivisionFloat -->
-        <test-method status="PASS" signature="TestDivisionInt()[pri:0, instance:com.softhinkers.division.TestDivision@3d8c7aca]" name="TestDivisionInt" duration-ms="1" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
+        <test-method status="PASS" signature="TestDivisionInt()[pri:0, instance:com.softhinkers.division.TestDivision@79698539]" name="TestDivisionInt" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestDivisionInt -->
       </class> <!-- com.softhinkers.division.TestDivision -->
-      <class name="com.softhinkers.annotations.TestngAnnotations">
-        <test-method status="PASS" signature="beforeSuit()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@3498ed]" name="beforeSuit" is-config="true" duration-ms="32" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
+      <class name="com.softhinkers.testngdependents.DependsOnTest">
+        <test-method status="PASS" signature="LogOut()[pri:0, instance:com.softhinkers.testngdependents.DependsOnTest@26ba2a48]" name="LogOut" duration-ms="0" started-at="2020-12-03T20:52:15 IST" depends-on-methods="com.softhinkers.testngdependents.DependsOnTest.SignIn" finished-at="2020-12-03T20:52:15 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuit -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@3498ed]" name="beforeTest" is-config="true" duration-ms="0" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
+        </test-method> <!-- LogOut -->
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.softhinkers.testngdependents.DependsOnTest@26ba2a48]" name="OpenBrowser" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method status="PASS" signature="SignIn()[pri:0, instance:com.softhinkers.testngdependents.DependsOnTest@26ba2a48]" name="SignIn" duration-ms="0" started-at="2020-12-03T20:52:15 IST" depends-on-methods="com.softhinkers.testngdependents.DependsOnTest.OpenBrowser" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignIn -->
+      </class> <!-- com.softhinkers.testngdependents.DependsOnTest -->
+      <class name="com.softhinkers.testngdependents.DependsOnMethod">
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.softhinkers.testngdependents.DependsOnMethod@42d3bd8b]" name="OpenBrowser" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method status="PASS" signature="SignIn()[pri:0, instance:com.softhinkers.testngdependents.DependsOnMethod@42d3bd8b]" name="SignIn" duration-ms="0" started-at="2020-12-03T20:52:15 IST" depends-on-methods="com.softhinkers.testngdependents.DependsOnMethod.OpenBrowser" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignIn -->
+      </class> <!-- com.softhinkers.testngdependents.DependsOnMethod -->
+      <class name="com.softhinkers.annotations.TestngAnnotations">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@79b4d0f]" name="beforeTest" is-config="true" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@3498ed]" name="beforeClass" is-config="true" duration-ms="3" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@3498ed]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@79b4d0f]" name="beforeMethod" is-config="true" duration-ms="15" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@3498ed]" name="testCase1" duration-ms="1" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@79b4d0f]" name="beforeClass" is-config="true" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase1 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@3498ed]" name="afterMethod" is-config="true" duration-ms="0" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@3498ed]" name="afterTest" is-config="true" duration-ms="0" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@3498ed]" name="afterClass" is-config="true" duration-ms="0" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@79b4d0f]" name="afterClass" is-config="true" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterSuit()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@3498ed]" name="afterSuit" is-config="true" duration-ms="1" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@79b4d0f]" name="afterMethod" is-config="true" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@79b4d0f]" name="afterTest" is-config="true" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@79b4d0f]" name="testCase1" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase1 -->
+      </class> <!-- com.softhinkers.annotations.TestngAnnotations -->
+      <class name="com.softhinkers.multiplication.TestMultiplication">
+        <test-method status="PASS" signature="TestMultiplicationInt()[pri:0, instance:com.softhinkers.multiplication.TestMultiplication@73f792cf]" name="TestMultiplicationInt" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestMultiplicationInt -->
+        <test-method status="PASS" signature="TestMultiplicationFloat()[pri:0, instance:com.softhinkers.multiplication.TestMultiplication@73f792cf]" name="TestMultiplicationFloat" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestMultiplicationFloat -->
+      </class> <!-- com.softhinkers.multiplication.TestMultiplication -->
+      <class name="com.softhinkers.addition.TestAddition">
+        <test-method status="PASS" signature="testAdditionInt()[pri:0, instance:com.softhinkers.addition.TestAddition@6b2fad11]" name="testAdditionInt" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdditionInt -->
+        <test-method status="PASS" signature="testAdditionFloat()[pri:0, instance:com.softhinkers.addition.TestAddition@6b2fad11]" name="testAdditionFloat" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdditionFloat -->
+      </class> <!-- com.softhinkers.addition.TestAddition -->
+    </test> <!-- TestArithemetic -->
+    <test name="ToolsQA" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+      <class name="com.softhinkers.testngdependents.GroupDependsXml">
+        <test-method status="PASS" signature="CloseAccount()[pri:0, instance:com.softhinkers.testngdependents.GroupDependsXml@737996a0]" name="CloseAccount" duration-ms="0" depends-on-groups="viewaccount" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseAccount -->
+        <test-method status="PASS" signature="ViewAcc()[pri:0, instance:com.softhinkers.testngdependents.GroupDependsXml@737996a0]" name="ViewAcc" duration-ms="0" depends-on-groups="login" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ViewAcc -->
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.softhinkers.testngdependents.GroupDependsXml@737996a0]" name="OpenBrowser" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method status="PASS" signature="LogIn()[pri:0, instance:com.softhinkers.testngdependents.GroupDependsXml@737996a0]" name="LogIn" duration-ms="0" depends-on-groups="openbrowser" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogIn -->
+      </class> <!-- com.softhinkers.testngdependents.GroupDependsXml -->
+      <class name="com.softhinkers.annotations.TestngAnnotations">
+        <test-method status="PASS" signature="beforeSuit()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@79b4d0f]" name="beforeSuit" is-config="true" duration-ms="32" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuit -->
+        <test-method status="PASS" signature="afterSuit()[pri:0, instance:com.softhinkers.annotations.TestngAnnotations@79b4d0f]" name="afterSuit" is-config="true" duration-ms="0" started-at="2020-12-03T20:52:15 IST" finished-at="2020-12-03T20:52:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuit -->
       </class> <!-- com.softhinkers.annotations.TestngAnnotations -->
-      <class name="com.softhinkers.multiplication.TestMultiplication">
-        <test-method status="PASS" signature="TestMultiplicationFloat()[pri:0, instance:com.softhinkers.multiplication.TestMultiplication@5ebec15]" name="TestMultiplicationFloat" duration-ms="0" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestMultiplicationFloat -->
-        <test-method status="PASS" signature="TestMultiplicationInt()[pri:0, instance:com.softhinkers.multiplication.TestMultiplication@5ebec15]" name="TestMultiplicationInt" duration-ms="0" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestMultiplicationInt -->
-      </class> <!-- com.softhinkers.multiplication.TestMultiplication -->
-      <class name="com.softhinkers.addition.TestAddition">
-        <test-method status="PASS" signature="testAdditionFloat()[pri:0, instance:com.softhinkers.addition.TestAddition@1a407d53]" name="testAdditionFloat" duration-ms="15" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAdditionFloat -->
-        <test-method status="PASS" signature="testAdditionInt()[pri:0, instance:com.softhinkers.addition.TestAddition@1a407d53]" name="testAdditionInt" duration-ms="0" started-at="2020-12-03T19:58:44 IST" finished-at="2020-12-03T19:58:44 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAdditionInt -->
-      </class> <!-- com.softhinkers.addition.TestAddition -->
-    </test> <!-- TestArithemetic -->
+    </test> <!-- ToolsQA -->
   </suite> <!-- ArithemeticOperation -->
 </testng-results>
