@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
  * @package com.softhinkers.project_page
  * @date 12/16/2020
  */
-public class ProjectPage {
+public class Feature_1 {
 
     @Given("User is on the main page of {string}")
     public void userIsOnTheMainPageOf(String website) {
