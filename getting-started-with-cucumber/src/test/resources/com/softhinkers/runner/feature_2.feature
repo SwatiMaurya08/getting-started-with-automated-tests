@@ -1,3 +1,4 @@
+@feature_2
 Feature: This is feature_2 info
   Syntax about the Docs String used in Gherkin
 
