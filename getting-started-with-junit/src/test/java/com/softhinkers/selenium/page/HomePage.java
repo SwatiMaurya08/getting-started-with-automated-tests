@@ -3,6 +3,9 @@ package com.softhinkers.selenium.page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Swati Maurya
  * @company Softhinkers
@@ -15,7 +18,20 @@ public class HomePage {
     @FindBy(css = loginButtonCss)
     WebElement loginButton;
 
+    @FindBy(xpath = "//a/b")
+    List<WebElement> HeadingList;
+
+
     public void clickOnLoginButton() {
         loginButton.click();
+    }
+
+    public List<String> getTextFromHeadingList() {
+        List<String> headingNameList = new ArrayList<String>();
+        for (WebElement HeadingName : HeadingList) {
+            String heading = HeadingName.getText();
+            headingNameList.add(heading);
+        }
+        return headingNameList;
     }
 }

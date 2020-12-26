@@ -8,9 +8,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.ArrayList;
@@ -27,6 +25,7 @@ public class AdminTest {
     LoginPage loginPage;
     HomePage homePage;
 
+
     private WebDriver driver;
     private final String baseUrl = "http://www.softhinkers.com/";
 
@@ -39,8 +38,8 @@ public class AdminTest {
         adminPage = PageFactory.initElements(driver, AdminPage.class);
         driver.get(baseUrl);
         homePage.clickOnLoginButton();
-        loginPage.inputUsername("xxxxxx");
-        loginPage.inputPassword("xxxx");
+        loginPage.inputUsername("Softhinker.com");
+        loginPage.inputPassword("Life4fun");
         loginPage.clickOnSubmitButton();
 
     }
@@ -51,14 +50,14 @@ public class AdminTest {
         driver.quit();
     }
 
-   // @Test
+    // @Test
     public void verifyAdminHeader() {
         String adminHeaderExpected = "Softhinkers Admin Panel";
         String adminHeaderActual = adminPage.getTextFromAdminHeader();
         Assert.assertEquals("Expected admin header title does not matched", adminHeaderExpected, adminHeaderActual);
     }
 
-   // @Test
+    // @Test
     public void verifyAdminHome() {
         String adminHomeExpected = "Home";
         String adminHomeActual = adminPage.getTextFromHome();
@@ -82,4 +81,7 @@ public class AdminTest {
         Assert.assertEquals("Text Does not Matched", expectedList, actualList);
 
     }
+
+
+
 }
