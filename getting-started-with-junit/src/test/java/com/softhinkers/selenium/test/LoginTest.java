@@ -29,8 +29,6 @@ public class LoginTest {
         System.setProperty("webdriver.chrome.driver", "C:/Users/SWATI/Downloads/chromedriver_win32/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(baseUrl);
-        driver.manage().window().setSize(new Dimension(1275, 564));
-
         loginPage = PageFactory.initElements(driver, LoginPage.class);
         homePage = PageFactory.initElements(driver, HomePage.class);
 
