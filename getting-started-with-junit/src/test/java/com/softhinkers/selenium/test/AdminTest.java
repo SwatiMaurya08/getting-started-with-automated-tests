@@ -5,8 +5,8 @@ import com.softhinkers.selenium.page.AdminPage;
 import com.softhinkers.selenium.page.HomePage;
 import com.softhinkers.selenium.page.LoginPage;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.support.PageFactory;
 
 
 import java.util.ArrayList;
@@ -24,11 +24,18 @@ public class AdminTest extends BaseTest {
     HomePage homePage;
 
 
+    public AdminTest() {
+        adminPage = new AdminPage(getDriver());
+        loginPage = new LoginPage(getDriver());
+        homePage = new HomePage(getDriver());
+    }
 
-    public AdminTest(){
-            adminPage = new AdminPage(getDriver());
-            loginPage = new LoginPage(getDriver());
-            homePage = new HomePage(getDriver()) ;
+    @Before
+    public void login() {
+        homePage.clickOnLoginButton();
+        loginPage.inputUsername("xxxx");
+        loginPage.inputPassword("xxx");
+        loginPage.clickOnSubmitButton();
     }
 
     //@Test
@@ -40,10 +47,6 @@ public class AdminTest extends BaseTest {
 
     @Test
     public void verifyAdminHeaderOptions() {
-        homePage.clickOnLoginButton();
-        loginPage.inputUsername("xxxx");
-        loginPage.inputPassword("xxx");
-        loginPage.clickOnSubmitButton();
         List<String> expectedList = new ArrayList<String>();
         List<String> actualList = new ArrayList<String>();
         expectedList.add("Home");
