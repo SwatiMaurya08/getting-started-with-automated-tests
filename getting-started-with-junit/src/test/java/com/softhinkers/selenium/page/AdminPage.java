@@ -1,13 +1,11 @@
 package com.softhinkers.selenium.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +15,7 @@ import java.util.List;
  * @package com.softhinkers.selenium
  * @date 12/24/2020
  */
-public class AdminPage {
+public class AdminPage{
 
     private final String adminHeaderId = "//*[@id='wrapper']/h1/b";
     private final String adminHomeId = "//*[@id='adminmenu']/li[1]/a/b";
