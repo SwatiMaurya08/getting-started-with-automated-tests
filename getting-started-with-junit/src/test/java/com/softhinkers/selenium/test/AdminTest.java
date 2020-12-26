@@ -38,8 +38,8 @@ public class AdminTest {
         adminPage = PageFactory.initElements(driver, AdminPage.class);
         driver.get(baseUrl);
         homePage.clickOnLoginButton();
-        loginPage.inputUsername("Softhinker.com");
-        loginPage.inputPassword("Life4fun");
+        loginPage.inputUsername("xxxxxx");
+        loginPage.inputPassword("xxx");
         loginPage.clickOnSubmitButton();
 
     }
