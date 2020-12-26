@@ -1,7 +1,9 @@
 package com.softhinkers.selenium.page;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * @author Swati Maurya
@@ -24,7 +26,9 @@ public class LoginPage {
     @FindBy(name = submitButtonCss)
     WebElement submitButton;
 
-
+    public LoginPage(WebDriver driver) {
+        PageFactory.initElements(driver,this);
+    }
     public void clickOnSubmitButton() {
         submitButton.click();
     }

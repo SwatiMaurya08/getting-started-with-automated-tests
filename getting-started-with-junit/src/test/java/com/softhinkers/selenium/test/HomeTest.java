@@ -20,8 +20,8 @@ import java.util.List;
 public class HomeTest extends BaseTest {
     HomePage homePage;
 
-    public HomeTest(){
-        homePage = PageFactory.initElements(getDriver(), HomePage.class);
+    public HomeTest() {
+        homePage = new HomePage(getDriver());
     }
 
 
@@ -38,7 +38,7 @@ public class HomeTest extends BaseTest {
         expectedList.add("Login");
         expectedList.add("Register");
         actualList.addAll(homePage.getTextFromHeadingList());
-        Assert.assertEquals("Actual Outcome Does not match with Expexted", expectedList, actualList);
+        Assert.assertEquals("Actual Outcome Does not match with Expected", expectedList, actualList);
 
     }
 }

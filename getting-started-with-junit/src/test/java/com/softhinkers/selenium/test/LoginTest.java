@@ -1,6 +1,7 @@
 package com.softhinkers.selenium.test;
 
 import com.softhinkers.selenium.common.BaseTest;
+import com.softhinkers.selenium.page.AdminPage;
 import com.softhinkers.selenium.page.HomePage;
 import com.softhinkers.selenium.page.LoginPage;
 import org.junit.Test;
@@ -11,16 +12,17 @@ public class LoginTest extends BaseTest {
     LoginPage loginPage;
 
     public LoginTest() {
-        homePage = PageFactory.initElements(getDriver(), HomePage.class);
-        loginPage = PageFactory.initElements(getDriver(), LoginPage.class);
+        loginPage = new LoginPage(getDriver());
+        homePage = new HomePage(getDriver());
+
     }
 
     @Test
     public void login() {
         homePage.clickOnLoginButton();
 
-        loginPage.inputUsername("softhinkers");
-        loginPage.inputPassword("xxx");
+        loginPage.inputUsername("xxxx");
+        loginPage.inputPassword("xxxx");
         loginPage.clickOnSubmitButton();
     }
 }

@@ -3,6 +3,7 @@ package com.softhinkers.selenium.page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -29,6 +30,11 @@ public class AdminPage{
     @FindBy(xpath = "//a/b")
     List<WebElement> HeaderOptions;
 
+
+    public AdminPage(WebDriver driver) {
+        PageFactory.initElements(driver,this);
+    }
+
     public List<String> getTextFromHeaders() {
         List<String> optionNameList = new ArrayList<String>();
         for (WebElement option : HeaderOptions) {
@@ -43,9 +49,6 @@ public class AdminPage{
         return adminHeader.getText();
     }
 
-    public String getTextFromHome() {
-        return AdminHome.getText();
-    }
 
     public String getTextFromAdminHeaderExplicit(WebDriver driver) {
         WebElement adminHeaderExplicit = new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf((adminHeader)));
