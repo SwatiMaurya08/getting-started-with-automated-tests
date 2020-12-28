@@ -21,8 +21,8 @@ public class LoginTest extends BaseTest {
     public void login() {
         homePage.clickOnLoginButton();
 
-        loginPage.inputUsername("xxxx");
-        loginPage.inputPassword("xxxx");
+        loginPage.inputUsername("xxxxx");
+        loginPage.inputPassword("xxx");
         loginPage.clickOnSubmitButton();
     }
 }

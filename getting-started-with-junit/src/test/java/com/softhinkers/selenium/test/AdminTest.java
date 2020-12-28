@@ -33,7 +33,7 @@ public class AdminTest extends BaseTest {
     @Before
     public void login() {
         homePage.clickOnLoginButton();
-        loginPage.inputUsername("xxxx");
+        loginPage.inputUsername("xxxxx");
         loginPage.inputPassword("xxx");
         loginPage.clickOnSubmitButton();
     }
