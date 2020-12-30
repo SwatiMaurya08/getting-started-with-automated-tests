@@ -11,21 +11,25 @@
             <class name="com.softhinkers.testngdependents.DependsOnGroups"/>
             <class name="com.softhinkers.testngdependents.DependsOnMethod"/>
             <class name="com.softhinkers.testngdependents.DependsOnTest"/>
+            <class name="com.softhinkers.selenium.test.HomeTest"/>
+            <class name="com.softhinkers.selenium.test.AdminTest"/>
+            <class name="com.softhinkers.selenium.test.LoginTest"/>
+
         </classes>
     </test>
 
-    <test name="ToolsQA">
-        <groups>
-            <dependencies>
-                <group depends-on="openbrowser" name="login"></group>
-                <group depends-on="login" name="viewaccount"></group>
-                <group depends-on="viewaccount" name="logout"></group>
-            </dependencies>
-        </groups>
-        <classes>
-            <class name="com.softhinkers.testngdependents.GroupDependsXml"/>
-        </classes>
-    </test>
+        <test name="ToolsQA">
+            <groups>
+                <dependencies>
+                    <group depends-on="openbrowser" name="login"></group>
+                    <group depends-on="login" name="viewaccount"></group>
+                    <group depends-on="viewaccount" name="logout"></group>
+                </dependencies>
+            </groups>
+            <classes>
+                <class name="com.softhinkers.testngdependents.GroupDependsXml"/>
+            </classes>
+        </test>
 </suite>
 
 
