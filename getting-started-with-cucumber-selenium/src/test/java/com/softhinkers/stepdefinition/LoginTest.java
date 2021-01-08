@@ -1,19 +1,18 @@
 package com.softhinkers.stepdefinition;
 
 import com.softhinkers.common.BaseTest;
+import com.softhinkers.common.Button;
 import com.softhinkers.pages.HomePage;
 import com.softhinkers.pages.LoginPage;
+import com.softhinkers.pages.ProjectPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.After;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
+import static com.softhinkers.common.Button.*;
 import static com.softhinkers.common.Constant.*;
-import static com.softhinkers.common.Constant.BASE_URL;
 
 
 /**
@@ -25,55 +24,47 @@ import static com.softhinkers.common.Constant.BASE_URL;
 public class LoginTest extends BaseTest {
     HomePage homePage;
     LoginPage loginPage;
-
-    private WebDriver driver = null;
-
-    public void setUp() {
-        if (driver == null) {
-            System.setProperty("webdriver.chrome.driver", WEBDRIVER_LOCATION);
-            driver = new ChromeDriver();
-            driver.manage().window().maximize();
-            driver.get(BASE_URL);
-        }
-    }
-
-    public WebDriver getDriver() {
-        return driver;
-    }
-
-
-    @After
-    public void tearDown() {
-        getDriver().close();
-        getDriver().quit();
-    }
+    ProjectPage projectPage;
 
     public LoginTest() {
         homePage = new HomePage(getDriver());
         loginPage = new LoginPage(getDriver());
+        projectPage = new ProjectPage(getDriver());
     }
 
     @Given("user opens {string}")
     public void userOpens(String url) {
-        System.out.println("Inside @Given");
-//        getDriver().get(url);
+        getDriver().get(url);
     }
 
     @When("user clicks on {string} button")
     public void userClicksOnButton(String button) {
-        switch (button) {
-            case "login": {
-                homePage.clickOnLoginButton();
-                break;
+        Button buttonEnum = getButtonEnum(button.toLowerCase());
+        if (null != buttonEnum) {
+            switch (buttonEnum) {
+                case LOGIN: {
+                    homePage.clickOnLoginButton();
+                    break;
+                }
+                case SUBMIT: {
+                    loginPage.submitButton();
+                    break;
+                }
+                case PROJECTS: {
+                    projectPage.getProjectButton();
+                    break;
+                }
+                case ANDROID: {
+                    projectPage.getAndroidButton();
+                    break;
+                }
+                default: {
+                    Assert.fail("Button cannot be found");
+                    break;
+                }
             }
-            case "submit": {
-                loginPage.submitButton();
-                break;
-            }
-            default: {
-                Assert.fail("Button cannot be found");
-                break;
-            }
+        } else {
+            Assert.fail(button + " button cannot be empty or null");
         }
 
     }
@@ -88,16 +79,48 @@ public class LoginTest extends BaseTest {
                 Assert.assertEquals("Actual Url does not match to Expected Url", expectedUrl, actualUrl);
 
                 String actual = loginPage.getPleaseLoginText().trim();
-                String expected = "Please Log In or";
+                String expected = "Please Log In or Sign Up";
                 Assert.assertEquals("Actual Text does not match to Expected Text ", expected, actual);
                 break;
             }
             case "admin": {
-                //todo
+                String actualUrl = getDriver().getCurrentUrl();
+                String expectedUrl = "http://softhinkers.com/admin/index.php";
+                Assert.assertEquals("Actual Url does not match to Expected Url", expectedUrl, actualUrl);
+                break;
+            }
+            case "projects": {
+                String actualUrl = getDriver().getCurrentUrl();
+                String expectedUrl = "http://softhinkers.com/projects.php";
+                Assert.assertEquals("Actual Url does not match to Expected Url", expectedUrl, actualUrl);
+                break;
+            }
+            case "android": {
+                String actualUrl = getDriver().getCurrentUrl();
+                String expectedUrl = "http://softhinkers.com/s-android";
+                Assert.assertEquals("Actual Url does not match to Expected Url", expectedUrl, actualUrl);
+                break;
+            }
+            case "phone silencer": {
+                String actualUrl = getDriver().getCurrentUrl();
+                String expectedUrl = "http://softhinkers.com/p-phone-silencer";
+                Assert.assertEquals("Actual Url does not match to Expected Url", expectedUrl, actualUrl);
+                break;
+            }
+            case "ghost blaster": {
+                String actualUrl = getDriver().getCurrentUrl();
+                String expectedUrl = "http://softhinkers.com/p-ghost-blasters";
+                Assert.assertEquals("Actual Url does not match to Expected Url", expectedUrl, actualUrl);
+                break;
+            }
+            case "mini soccer": {
+                String actualUrl = getDriver().getCurrentUrl();
+                String expectedUrl = "http://softhinkers.com/p-mini-soccer";
+                Assert.assertEquals("Actual Url does not match to Expected Url", expectedUrl, actualUrl);
                 break;
             }
             default: {
-                Assert.fail(page + " Does not exist");
+                Assert.fail(page + " does not exist");
             }
         }
 
@@ -122,4 +145,6 @@ public class LoginTest extends BaseTest {
             }
         }
     }
+
+
 }

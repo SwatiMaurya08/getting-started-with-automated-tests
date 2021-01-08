@@ -3,7 +3,6 @@ package com.softhinkers.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -20,8 +19,7 @@ public class LoginPage {
 
 
     public LoginPage(WebDriver driver) {
-        PageFactory.initElements(driver, LoginPage.class);
-        System.out.println("Inside LoginPage");
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(id = inputUsernameEmailId)
@@ -53,4 +51,6 @@ public class LoginPage {
     public String getPleaseLoginText() {
         return pleaseLoginText.getText();
     }
+
+
 }
