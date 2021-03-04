@@ -49,9 +49,4 @@ public class AdminPage{
         return adminHeader.getText();
     }
 
-
-    public String getTextFromAdminHeaderExplicit(WebDriver driver) {
-        WebElement adminHeaderExplicit = new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf((adminHeader)));
-        return adminHeaderExplicit.getText();
-    }
 }
