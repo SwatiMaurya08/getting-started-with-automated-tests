@@ -56,15 +56,18 @@ public class ProjectTest extends BaseTest {
             case "phone silencer": {
                 String actualText = projectPage.getPhoneSilencerHeading();
                 Assert.assertEquals("Actual Text does not match to Expected Text ", heading, actualText);
+                break;
             }
             case "ghost blaster": {
                 String actualText = projectPage.getGhostBlasterHeading();
                 Assert.assertEquals("Actual Text does not match to Expected Text ", heading, actualText);
+                break;
 
             }
             case "mini soccer": {
                 String actualText = projectPage.getMiniSoccerHeading();
                 Assert.assertEquals("Actual Text does not match to Expected Text ", heading, actualText);
+                break;
 
             }
         }

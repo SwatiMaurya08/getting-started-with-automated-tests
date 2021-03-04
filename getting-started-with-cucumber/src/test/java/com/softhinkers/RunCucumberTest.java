@@ -10,6 +10,8 @@ import org.testng.annotations.DataProvider;
  * @package com.softhinkers
  * @date 12/21/2020
  */
+
+//From TestNG Runner
 @CucumberOptions( glue = "com.softhinkers.project_page" , tags = "@scenario_1 or @feature_2" )
 public class RunCucumberTest extends AbstractTestNGCucumberTests{
     @Override

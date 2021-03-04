@@ -16,8 +16,7 @@ public class HomePage {
 
 
     public HomePage(WebDriver driver) {
-        PageFactory.initElements(driver, HomePage.class);
-        System.out.println("Inside Home PGE");
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(css = loginButtonCss)

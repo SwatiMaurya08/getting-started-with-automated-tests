@@ -1,11 +1,9 @@
 package com.softhinkers.common;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import org.junit.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import static com.softhinkers.common.Constant.BASE_URL;
 import static com.softhinkers.common.Constant.WEBDRIVER_LOCATION;
 
 /**
@@ -15,9 +13,9 @@ import static com.softhinkers.common.Constant.WEBDRIVER_LOCATION;
  * @date 12/31/2020
  */
 public class BaseTest {
-    private WebDriver driver = null;
+    private static WebDriver driver = null;
 
-    public BaseTest(){
+    public BaseTest() {
         setUp();
     }
 
@@ -26,11 +24,11 @@ public class BaseTest {
             System.setProperty("webdriver.chrome.driver", WEBDRIVER_LOCATION);
             driver = new ChromeDriver();
             driver.manage().window().maximize();
-            driver.get(BASE_URL);
+
         }
     }
 
-    public WebDriver getDriver() {
+    public static WebDriver getDriver() {
         return driver;
     }
 }
