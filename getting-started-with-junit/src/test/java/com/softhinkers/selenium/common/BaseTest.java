@@ -22,7 +22,6 @@ public class BaseTest {
 
     @BeforeClass
     public static void setup() {
-        System.out.println("Inside Before class");
         System.setProperty("webdriver.chrome.driver", webDriverLocation);
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -32,7 +31,6 @@ public class BaseTest {
 
     @AfterClass
     public static void tearDown() {
-        System.out.println("Inside After class");
         driver.close();
         driver.quit();
     }
