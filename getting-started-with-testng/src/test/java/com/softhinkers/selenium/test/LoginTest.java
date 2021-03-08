@@ -22,6 +22,9 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void login() {
+        System.out.println("The current thread ID  Chrome for LoginTest " + Thread.currentThread().getId());
+        System.out.println("The name of thread ID  Chrome for LoginTest " + Thread.currentThread().getName());
+        System.out.println("The prioritiy of thread ID  Chrome for LoginTest " + Thread.currentThread().getPriority());
         homePage.clickOnLoginButton();
 
         loginPage.inputUsername(USERNAME);

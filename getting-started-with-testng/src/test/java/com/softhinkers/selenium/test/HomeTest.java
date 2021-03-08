@@ -26,6 +26,9 @@ public class HomeTest extends BaseTest {
 
     @Test
     public void verifyHeadingLists() {
+        System.out.println("The current thread ID  Chrome for HomeTest " + Thread.currentThread().getId());
+        System.out.println("The name of thread ID  Chrome for HomeTest " + Thread.currentThread().getName());
+        System.out.println("The prioritiy of thread ID  Chrome for HomeTest " + Thread.currentThread().getPriority());
         List<String> expectedList = new ArrayList<String>();
         List<String> actualList = new ArrayList<String>();
         expectedList.add("SOFTHINKERS");
