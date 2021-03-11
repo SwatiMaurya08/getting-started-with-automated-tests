@@ -14,6 +14,7 @@ import io.cucumber.java.en.When;
 public class Feature_3 {
     @Given("the following users exist:")
     public void theFollowingUsersExist(DataTable table) {
+        System.out.println(Thread.currentThread().getId() + "  " + table);
         System.out.println(table.asList());
         System.out.println(table.column(1));
         System.out.println(table.cell(1, 1));
@@ -22,6 +23,7 @@ public class Feature_3 {
 
     @Given("I have the following books in the store")
     public void iHaveTheFollowingBooksInTheStore(DataTable table) {
+        System.out.println(Thread.currentThread().getId() + "  " + table);
         System.out.println(table.height());
         System.out.println(table.asMaps());
         System.out.println(table.hashCode());
