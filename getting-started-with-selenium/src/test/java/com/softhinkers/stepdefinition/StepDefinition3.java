@@ -48,7 +48,7 @@ public class StepDefinition3 extends BaseTest {
                 break;
             }
             default: {
-                fail("Input Fields cannot be blank");
+                fail("Input Fields cannot be blank :" + places);
                 break;
             }
         }
