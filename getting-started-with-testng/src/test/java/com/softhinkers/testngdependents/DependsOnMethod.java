@@ -1,5 +1,8 @@
 package com.softhinkers.testngdependents;
 
+import com.softhinkers.testcasespriorities.TestCasesPriorities;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 /**
@@ -14,14 +17,15 @@ import org.testng.annotations.Test;
  */
 
 public class DependsOnMethod {
+    public static final Logger LOGGER = LogManager.getLogger(DependsOnMethod.class);
     @Test(dependsOnMethods = {"OpenBrowser"})
     public void SignIn() {
-        System.out.println("This will execute second (SignIn)");
+        LOGGER.info("This will execute second (SignIn)");
     }
 
     @Test
     public void OpenBrowser() {
-        System.out.println("This will execute first (Open Browser)");
+        LOGGER.info("This will execute first (Open Browser)");
     }
 }
 

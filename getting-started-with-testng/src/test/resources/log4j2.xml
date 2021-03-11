@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="LogtoConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="com.softhinkers" level="debug"  additivity="false">
+        <AppenderRef ref="LogtoConsole"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="LogtoConsole"/>
+        </Root>
+    </Loggers>
+</Configuration>

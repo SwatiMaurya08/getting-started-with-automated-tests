@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 
 import java.sql.Driver;
@@ -42,6 +43,7 @@ public class BaseTest {
             } catch (WebDriverException e) {
 
                 System.out.println("Browser not found" + e.getMessage());
+
 
             }
             driver.manage().window().maximize();

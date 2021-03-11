@@ -1,5 +1,7 @@
 package com.softhinkers.testngdependents;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 /**
@@ -9,18 +11,20 @@ import org.testng.annotations.Test;
  * @date 12/3/2020
  */
 public class DependsOnTest {
+    public static final Logger LOGGER = LogManager.getLogger(DependsOnTest.class);
+
     @Test(dependsOnMethods = {"OpenBrowser"})
     public void SignIn() {
-        System.out.println("User has signed in successfully");
+        LOGGER.info("User has signed in successfully");
     }
 
     @Test
     public void OpenBrowser() {
-        System.out.println("The browser is opened");
+        LOGGER.info("The browser is opened");
     }
 
     @Test(dependsOnMethods = {"SignIn"})
     public void LogOut() {
-        System.out.println("The user logged out successfully");
+        LOGGER.info("The user logged out successfully");
     }
 }

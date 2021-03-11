@@ -1,5 +1,7 @@
 package com.softhinkers.testngdependents;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 /**
@@ -14,23 +16,24 @@ import org.testng.annotations.Test;
  */
 
 public class GroupDepends {
+    public static final Logger LOGGER = LogManager.getLogger(GroupDepends.class);
     @Test(groups = {"viewacc"})
     public void ViewAcc() {
-        System.out.println("View Your Dashboardd");
+        LOGGER.info("View Your Dashboardd");
     }
 
     @Test(groups = {"openbrowser"})
     public void OpenBrowser() {
-        System.out.println("Browser Opened Successfully");
+        LOGGER.info("Browser Opened Successfully");
     }
 
     @Test(groups = {"login"})
     public void LogIn() {
-        System.out.println("Login Into The Account");
+        LOGGER.info("Login Into The Account");
     }
 
     @Test(groups = {"logout"})
     public void CloseAccount() {
-        System.out.println("Closing The Account");
+        LOGGER.info("Closing The Account");
     }
 }

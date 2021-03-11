@@ -5,6 +5,7 @@ import com.softhinkers.selenium.page.AdminPage;
 import com.softhinkers.selenium.page.HomePage;
 import com.softhinkers.selenium.page.LoginPage;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import java.util.ArrayList;
@@ -40,9 +41,12 @@ public class AdminTest extends BaseTest {
 
     //@Test
     public void verifyAdminHeader() {
+        Reporter.log("This test verifies the current selenium is in AdminTest Class");
+        Reporter.log("Launching Google Chrome Driver for this test");
         String adminHeaderExpected = "Softhinkers Admin Panel";
         String adminHeaderActual = adminPage.getTextFromAdminHeader();
         Assert.assertEquals(adminHeaderActual,adminHeaderExpected, "Expected Text does not Match to Actual Text");
+
     }
 
     @Test
@@ -60,7 +64,6 @@ public class AdminTest extends BaseTest {
         expectedList.add("Logout");
         actualList.addAll(adminPage.getTextFromHeaders());
         Assert.assertEquals(actualList,expectedList,"Expected Text does not Match to Actual Text");
-
     }
 
 

@@ -1,5 +1,8 @@
 package com.softhinkers.testngdependents;
 
+import com.softhinkers.testcasespriorities.TestCasesPriorities;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 /**
@@ -9,14 +12,15 @@ import org.testng.annotations.Test;
  * @date 12/3/2020
  */
 public class DependsOnGroups {
+    public static final Logger LOGGER = LogManager.getLogger(DependsOnGroups.class);
 
     @Test(dependsOnGroups = {"SignIn"})
     public void ViewAcc() {
-        System.out.println("SignIn Successful");
+        LOGGER.info("SignIn Successful");
     }
 
     @Test(groups = {"SignIn"})
     public void LogIn() {
-        System.out.println("Logging In Success");
+        LOGGER.info("Logging In Success");
     }
 }

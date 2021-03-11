@@ -3,6 +3,7 @@ package com.softhinkers.selenium.test;
 import com.softhinkers.selenium.common.BaseTest;
 import com.softhinkers.selenium.page.HomePage;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 
@@ -26,6 +27,9 @@ public class HomeTest extends BaseTest {
 
     @Test
     public void verifyHeadingLists() {
+        Reporter.log("This test verifies the current selenium is in HomeTest Class");
+        Reporter.log("Launching Google Chrome Driver for this test");
+
         System.out.println("The current thread ID  Chrome for HomeTest " + Thread.currentThread().getId());
         System.out.println("The name of thread ID  Chrome for HomeTest " + Thread.currentThread().getName());
         System.out.println("The prioritiy of thread ID  Chrome for HomeTest " + Thread.currentThread().getPriority());
